@@ -54,7 +54,3 @@ A simple **Library Management System** built with **PHP** to practice PHP syntax
 
 Contributions and improvements are welcome! Feel free to fork the repo and submit a pull request.
 
-## 📜 License
-
-This project is licensed under the MIT License.
-
