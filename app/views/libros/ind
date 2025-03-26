@@ -1,0 +1,31 @@
+<?php require_once __DIR__ . '/../layouts/header.php'; ?>
+
+<h1>Listado de Libros</h1>
+<a href="/biblioteca/public/index.php?action=agregarLibro">Agregar Libro</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Materia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php if (!empty($libros)): ?>
+            <?php foreach ($libros as $libro): ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($libro->getTitulo()); ?></td>
+                    <td><?php echo htmlspecialchars($libro->getAutor()); ?></td>
+                    <td><?php echo htmlspecialchars($libro->getMateria()); ?></td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr>
+                <td colspan="3">No hay libros registrados.</td>
+            </tr>
+        <?php endif; ?>
+    </tbody>
+</table>
+
+<?php require_once __DIR__ . '/../layouts/footer.php'; ?>
